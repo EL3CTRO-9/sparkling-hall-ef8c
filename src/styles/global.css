@@ -4,89 +4,149 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 :root {
-  --background: #000000; /* Pure black background */
-  --text-color: #ffffff; /* White text */
-  --heading-color: #ff9800; /* Warm orange headings */
-  --link-color: #4a90e2; /* Soft blue links */
-  --link-hover: #ff5722; /* Reddish-orange hover */
-  --card-bg: #121212; /* Dark gray for contrast */
-  --border-color: #333333; /* Subtle border */
+  --accent: #ff9800; /* Orange */
+  --accent-dark: #ff5722; /* Darker orange */
+  --black: 0, 0, 0;
+  --gray: 150, 150, 150;
+  --gray-light: 80, 80, 80;
+  --gray-dark: 200, 200, 200;
+  --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
+    0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text-color);
-  font-family: 'Inter', sans-serif;
+  font-family: "Atkinson", sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  font-size: 18px;
+  background: black; /* Solid black background */
+  color: white; /* White text */
+  font-size: 20px;
   line-height: 1.7;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
-  font-weight: bold;
+main {
+  width: 720px;
+  max-width: calc(100% - 2em);
+  margin: auto;
+  padding: 3em 1em;
 }
 
-/* Links */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.5rem 0;
+  color: white; /* White headings */
+  line-height: 1.2;
+}
+
+h1 { font-size: 3.052em; }
+h2 { font-size: 2.441em; }
+h3 { font-size: 1.953em; }
+h4 { font-size: 1.563em; }
+h5 { font-size: 1.25em; }
+
+strong, b {
+  font-weight: 700;
+}
+
 a {
-  color: var(--link-color);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  color: var(--accent); /* Orange links */
 }
 
 a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
+  color: var(--accent-dark); /* Darker orange on hover */
 }
 
-/* Containers & Sections */
-.container {
-  width: 90%;
-  max-width: 800px;
-  margin: auto;
-  padding: 2em 1em;
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-  border: 1px solid var(--border-color);
+p {
+  margin-bottom: 1em;
 }
 
-/* Buttons */
-button {
-  background-color: var(--heading-color);
-  color: var(--text-color);
-  border: none;
-  padding: 10px 20px;
+.prose p {
+  margin-bottom: 2em;
+}
+
+textarea, input {
+  width: 100%;
   font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  background: #222; /* Darker input background */
+  color: white; /* White text */
+  border: 1px solid gray;
+  padding: 8px;
 }
 
-button:hover {
-  background-color: var(--link-hover);
+table {
+  width: 100%;
 }
 
-/* Code Blocks */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 code {
   padding: 2px 5px;
-  background-color: #222222;
-  border-radius: 4px;
+  background-color: #222;
+  border-radius: 2px;
+  color: #ff9800; /* Orange text for code */
 }
 
 pre {
-  background-color: #111111;
   padding: 1.5em;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
-  overflow-x: auto;
+  background-color: #222;
+}
+
+pre > code {
+  all: unset;
+}
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 0 0 0 20px;
+  margin: 0;
+  font-size: 1.333em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid gray;
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 18px;
+  }
+  main {
+    padding: 1em;
+  }
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
