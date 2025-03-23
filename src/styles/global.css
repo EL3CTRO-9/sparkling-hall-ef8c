@@ -207,3 +207,26 @@ header {                   /*kjheajdshfoaoifoisjkofoisodigoisgoi*/
   	}
 }
 
+footer {
+  	padding: 2em 1em 6em 1em;
+  	background: var(--background);
+  	color: var(--primary-text);
+  	text-align: center;
+  	border-top: 2px solid var(--primary-text);
+	}
+
+	.social-links {
+  	display: flex;
+  	justify-content: center;
+  	gap: 1em;
+  	margin-top: 1em;
+	}
+
+	.social-links a {
+  	text-decoration: none;
+	color: var(--accent);
+	}
+
+	.social-links a:hover {
+  	color: var(--secondary-accent);
+	}
