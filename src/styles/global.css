@@ -5,9 +5,11 @@
  */
 
 :root {
-  --accent: #ff9800; /* Orange */
-  --accent-dark: #ff5722; /* Darker orange */
-  --black: 0, 0, 0;
+  --background: #2d2d2d; /* Charcoal Gray */
+  --primary-text: #ffffff; /* Pure White */
+  --accent: #ff6b6b; /* Soft Red */
+  --secondary-accent: #ffd166; /* Warm Yellow */
+  --link-color: #06d6a0; /* Turquoise */
   --gray: 150, 150, 150;
   --gray-light: 80, 80, 80;
   --gray-dark: 200, 200, 200;
@@ -36,8 +38,8 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: #403D39; /* Solid black background */
-  color: white; /* White text */
+  background: var(--background);
+  color: var(--primary-text);
   font-size: 20px;
   line-height: 1.7;
 }
@@ -51,7 +53,7 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5rem 0;
-  color: #CCC5B9; /* White headings */
+  color: var(--secondary-accent);
   line-height: 1.2;
 }
 
@@ -66,11 +68,11 @@ strong, b {
 }
 
 a {
-  color: var(--accent); /* Orange links */
+  color: var(--link-color);
 }
 
 a:hover {
-  color: var(--accent-dark); /* Darker orange on hover */
+  color: var(--accent);
 }
 
 p {
@@ -84,8 +86,8 @@ p {
 textarea, input {
   width: 100%;
   font-size: 16px;
-  background: #222; /* Darker input background */
-  color: #FFFCF2; /* White text */
+  background: #222;
+  color: var(--primary-text);
   border: 1px solid gray;
   padding: 8px;
 }
@@ -104,7 +106,7 @@ code {
   padding: 2px 5px;
   background-color: #222;
   border-radius: 2px;
-  color: #ff9800; /* Orange text for code */
+  color: var(--accent);
 }
 
 pre {
