@@ -36,44 +36,57 @@ import { SITE_TITLE } from '../consts';
 </header>
 <style>
 	header {
-		margin: 0;
-		padding: 0 1em;
-		background: #252422; /* Dark brownish-grey color */
-	    	color: orange; /* Ensuring text is visible */
-    		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		border-bottom: 2px solid white; /* Adds a white line below the header */
+  		margin: 0;
+  		padding: 0 1em;
+  		background: var(--background);
+  		color: var(--primary-text);
+ 		 box-shadow: var(--box-shadow);
+  		border-bottom: 2px solid var(--primary-text);
 	}
+
 	h2 {
-		margin: 0;
-		font-size: 1em;
+  		margin: 0;
+  		font-size: 1em;
 	}
 
 	h2 a,
-	h2 a.active {
-		text-decoration: none;
+		h2 a.active {
+  		text-decoration: none;
+  		color: var(--secondary-accent);
 	}
+
 	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+  		display: flex;
+  		align-items: center;
+  		justify-content: space-between;
 	}
+
 	nav a {
-		padding: 1em 0.5em;
-		color: #0892a5; /* Ensuring links are visible */
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
+		  padding: 1em 0.5em;
+  		color: var(--link-color);
+  		border-bottom: 4px solid transparent;
+  		text-decoration: none;
 	}
+
 	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
+  		text-decoration: none;
+  		border-bottom-color: var(--accent);
 	}
+
 	.social-links,
-	.social-links a {
-		display: flex;
+		.social-links a {
+  		display: flex;
+  		color: var(--primary-text);
 	}
+
+	.social-links a:hover {
+  		color: var(--accent);
+	}
+
 	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
+  		.social-links {
+    			display: none;
+  	}
+}
+
 </style>
