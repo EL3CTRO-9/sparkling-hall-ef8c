@@ -85,7 +85,7 @@ textarea, input {
   width: 100%;
   font-size: 16px;
   background: #222; /* Darker input background */
-  color: white; /* White text */
+  color: #FFFCF2; /* White text */
   border: 1px solid gray;
   padding: 8px;
 }
