@@ -29,6 +29,15 @@ import Layout from '../layouts/BlogPost.astro';
 	</div>
 
 	<!-- This script loads all embedded Credly badges -->
-	<script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+	<script>
+  		window.onload = function () {
+    			var script = document.createElement("script");
+    			script.src = "https://cdn.credly.com/assets/utilities/embed.js";
+    			script.async = true;
+    			document.body.appendChild(script);
+  		};
+	</script>
+
+
 
 </Layout>
