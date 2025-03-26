@@ -7,9 +7,9 @@
 :root {
     --background: #2d2d2d; /* Charcoal Gray */
     --primary-text: #ffffff; /* Pure White */
-    --accent: #ff6b6b; /* Soft Red */
+    --accent: #ffb466; /* Soft Red */
     --secondary-accent: #ffd166; /* Warm Yellow */
-    --link-color: #06d6a0; /* Turquoise */
+    --link-color: #ddd166; /* Turquoise */
     --gray: 150, 150, 150;
     --gray-light: 80, 80, 80;
     --gray-dark: 200, 200, 200;
@@ -75,7 +75,6 @@
   
   a:hover {
     color: var(--accent);
-    text-decoration: underline;
   }
   
   p {
@@ -141,7 +140,7 @@
   header {
     margin: 0;
     padding: 0 1em;
-    background: var(--background);
+    background: #1a1a1a; /* Darker Grey */
     color: var(--primary-text);
     box-shadow: var(--box-shadow);
     border-bottom: 2px solid var(--primary-text);
@@ -202,7 +201,7 @@
   
   footer {
     padding: 2em 1em 6em;
-    background: var(--background);
+    background: #1a1a1a; /* Darker Grey */
     color: var(--primary-text);
     text-align: center;
     border-top: 2px solid var(--primary-text);
