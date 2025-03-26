@@ -4,37 +4,44 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
 */
 
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+*/
+
 :root {
     --background: #2d2d2d; /* Charcoal Gray */
-    --primary-text: #ffffff; /* Pure White */
-    --accent: #ffb466; /* Soft Red */
-    --secondary-accent: #ffd166; /* Warm Yellow */
-    --link-color: #ddd166; /* Turquoise */
+    --header-footer-bg: #1c1c1c; /* Slightly softer dark grey */
+    --primary-text: #f5f5f5; /* Soft White */
+    --accent: #ffb400; /* Gold for contrast */
+    --secondary-accent: #ffcc66; /* Warm Yellow */
+    --link-color: #66c2ff; /* Light Blue for readability */
     --gray: 150, 150, 150;
     --gray-light: 80, 80, 80;
     --gray-dark: 200, 200, 200;
-    --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
-      0 8px 24px rgba(var(--gray), 33%), 
-      0 16px 32px rgba(var(--gray), 33%);
-  }
+    --box-shadow: 0 2px 6px rgba(var(--gray), 20%),
+      0 8px 24px rgba(var(--gray), 30%), 
+      0 16px 32px rgba(var(--gray), 30%);
+}
   
-  @font-face {
+@font-face {
     font-family: "Atkinson";
     src: url("/fonts/atkinson-regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-  }
+}
   
-  @font-face {
+@font-face {
     font-family: "Atkinson";
     src: url("/fonts/atkinson-bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-  }
+}
   
-  body {
+body {
     font-family: "Atkinson", sans-serif;
     margin: 0;
     padding: 0;
@@ -43,210 +50,152 @@
     color: var(--primary-text);
     font-size: 20px;
     line-height: 1.7;
-  }
+}
   
-  main {
+main {
     width: 720px;
     max-width: calc(100% - 2em);
     margin: auto;
     padding: 3em 1em;
-  }
+}
   
-  h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5rem 0;
     color: var(--secondary-accent);
     line-height: 1.2;
-  }
+}
   
-  h1 { font-size: 3.052em; }
-  h2 { font-size: 2.441em; }
-  h3 { font-size: 1.953em; }
-  h4 { font-size: 1.563em; }
-  h5 { font-size: 1.25em; }
+h1 { font-size: 3.052em; }
+h2 { font-size: 2.441em; }
+h3 { font-size: 1.953em; }
+h4 { font-size: 1.563em; }
+h5 { font-size: 1.25em; }
   
-  strong, b {
+strong, b {
     font-weight: 700;
-  }
+}
   
-  a {
+a {
     color: var(--link-color);
     text-decoration: none;
-  }
+    transition: color 0.3s ease;
+}
   
-  a:hover {
+a:hover {
     color: var(--accent);
-  }
+}
   
-  p {
+p {
     margin-bottom: 1em;
-  }
+}
   
-  .prose p {
+.prose p {
     margin-bottom: 2em;
-  }
+}
   
-  textarea, input {
+textarea, input {
     width: 100%;
     font-size: 16px;
     background: #222;
     color: var(--primary-text);
     border: 1px solid gray;
     padding: 8px;
-  }
+}
   
-  table {
+table {
     width: 100%;
-  }
+}
   
-  img {
+img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-  }
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
   
-  code {
+code {
     padding: 2px 5px;
     background-color: #222;
     border-radius: 2px;
     color: var(--accent);
-  }
+}
   
-  pre {
+pre {
     padding: 1.5em;
     border-radius: 8px;
     background-color: #222;
-  }
+}
   
-  pre > code {
+pre > code {
     all: unset;
-  }
+}
   
-  blockquote {
+blockquote {
     border-left: 4px solid var(--accent);
     padding: 0 0 0 20px;
     margin: 0;
     font-size: 1.333em;
-  }
+}
   
-  hr {
+hr {
     border: none;
     border-top: 1px solid gray;
-  }
+}
   
-  /* ============================= */
-  /* Header & Navigation Styles    */
-  /* ============================= */
-  
-  header {
+header {
     margin: 0;
-    padding: 0 1em;
-    background: #1a1a1a; /* Darker Grey */
+    padding: 15px 20px;
+    background: var(--header-footer-bg);
     color: var(--primary-text);
     box-shadow: var(--box-shadow);
-    border-bottom: 2px solid var(--primary-text);
-  }
+    border-bottom: 2px solid var(--secondary-accent);
+    text-align: center;
+}
   
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
-  
-  h2 a {
-    color: var(--secondary-accent);
-    text-decoration: none;
-  }
-  
-  nav {
+nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+    justify-content: center;
+    gap: 20px;
+}
   
-  nav a {
-    padding: 1em 0.5em;
+nav a {
     color: var(--link-color);
-    border-bottom: 4px solid transparent;
-  }
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
   
-  nav a.active {
-    border-bottom-color: var(--accent);
-  }
-  
-  /* ============================= */
-  /* Social Links                  */
-  /* ============================= */
-  
-  .social-links {
-    display: flex;
-    gap: 1em;
-  }
-  
-  .social-links a {
-    color: var(--primary-text);
-  }
-  
-  .social-links a:hover {
+nav a:hover {
     color: var(--accent);
-  }
+    background: rgba(var(--gray-dark), 0.2);
+}
   
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
-  }
-  
-  /* ============================= */
-  /* Footer Styles                  */
-  /* ============================= */
-  
-  footer {
+footer {
     padding: 2em 1em 6em;
-    background: #1a1a1a; /* Darker Grey */
+    background: var(--header-footer-bg);
     color: var(--primary-text);
     text-align: center;
-    border-top: 2px solid var(--primary-text);
-  }
+    border-top: 2px solid var(--secondary-accent);
+    box-shadow: var(--box-shadow);
+}
   
-  footer .social-links {
+footer .social-links {
     justify-content: center;
     margin-top: 1em;
-  }
+}
   
-  footer .social-links a {
+footer .social-links a {
     color: var(--accent);
-  }
+}
   
-  footer .social-links a:hover {
+footer .social-links a:hover {
     color: var(--secondary-accent);
-  }
-  
-  /* ============================= */
-  /* Accessibility Helpers          */
-  /* ============================= */
-  
-  .sr-only {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-  
-  /* ============================= */
-  /* Responsive Design             */
-  /* ============================= */
-  
-  @media (max-width: 720px) {
-    body {
-      font-size: 18px;
-    }
-    main {
-      padding: 1em;
-    }
-  }
+}
+
   
