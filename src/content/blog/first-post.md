@@ -1,11 +1,11 @@
 ---
 title: "Raspberry Pi Honey Pot"
-description: "Lorem ipsum dolor sit amet"
+description: "Setting Up a Raspberry Pi Honeypot for Network Threat Monitoring"
 pubDate: "April 01 2025"
 heroImage: "/blog1.jpg"
 ---
 
-# Setting Up a Raspberry Pi Honeypot for Network Threat Monitoring
+### Setting Up a Raspberry Pi Honeypot for Network Threat Monitoring
 
 ## Why I Set Up the Honeypot
 
@@ -31,27 +31,27 @@ To deploy the honeypot, I used:
 
 ## Setup Process
 
-### 1. Installing the Raspberry Pi OS
+## 1. Installing the Raspberry Pi OS
 1. Used **Raspberry Pi Imager** to download **64-bit Raspberry Pi OS** onto the SD card.
 2. Configured SSH access, Wi-Fi, and hostname before flashing the OS.
 
-### 2. Configuring SSH & Network Access
+## 2. Configuring SSH & Network Access
 1. Used **PuTTY Key Generator** to create a private key and saved the **public key**.
 2. Added the **Wi-Fi SSID & password** (if connecting via Wi-Fi).
 3. After flashing the SD card, ejected and inserted it into the Raspberry Pi.
 
-### 3. Hardware Assembly
+## 3. Hardware Assembly
 1. Attached the **cooling block and fan** onto the RPi module.
 2. Connected **Ethernet cable** from the RPi to my router.
 3. Powered the RPi using an **old phone charger**.
 
-### 4. SSH Connection & Honeypot Setup
+## 4. SSH Connection & Honeypot Setup
 1. Established an **SSH connection** using PuTTY on port **22**.
 2. Cloned the **DShield Honeypot repository** and followed the official installation guide:
    - 📌 [Installation Instructions](https://github.com/DShield-ISC/dshield/blob/main/docs/install-instructions/Raspbian.md)
 3. Checked for updates and verified the logs.
 
-### 5. Exposing the Honeypot for Web Logs
+## 5. Exposing the Honeypot for Web Logs
 - Initially, the honeypot did **not collect web logs** because it was not properly exposed.
 - The **Raspberry Pi did not have a routable IP address**, preventing external traffic from reaching it.
 - To resolve this:
@@ -59,7 +59,7 @@ To deploy the honeypot, I used:
   2. Placed the **Raspberry Pi in the DMZ** to expose it directly to incoming connections.
   3. Ran `status.sh` again to confirm it was working.
 
-### 6. Verifying Data Collection
+## 6. Verifying Data Collection
 - After these changes, the honeypot successfully logged attack data.
 - The setup now **monitors malicious activity targeting my home network**.
 - Next step: **Integrating with a SIEM for deeper analysis**.
