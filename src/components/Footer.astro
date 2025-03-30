@@ -2,28 +2,72 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Sahil Shaikh. All rights reserved.
-	<div class="social-links">
-		<a href="https://www.linkedin.com/in/sahil-shaikh-cs" target="_blank">
-			<span class="sr-only">Follow Astro on Twitter</span>
-			<svg viewBox="0 0 24 24" aria-hidden="true" width="32" height="32" astro-icon="social/linkedin"
-				><path
-					fill="currentColor"
-					d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.234c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.234h-3v-5.5c0-1.104-.896-2-2-2s-2 .896-2 2v5.5h-3v-10h3v1.263c.857-.755 2.029-1.263 3.25-1.263 2.481 0 4.5 2.019 4.5 4.5v5.5z
-"
-				></path></svg
-			>
-		</a>
-		<a href="https://github.com/EL3CTRO-9" target="_blank">
-			<span class="sr-only">Go to Astro's GitHub repo</span>
-			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/github"
-				><path
-					fill="currentColor"
-					d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-				></path></svg
-			>
-		</a>
-	</div>
-</footer>
+<footer class="footer">
+  <div class="footer__parralax">
+    <div class="footer__parralax-trees"></div>
+    <div class="footer__parralax-moto"></div>
+    <div class="footer__parralax-secondplan"></div>
+    <div class="footer__parralax-premierplan"></div>
+    <div class="footer__parralax-voiture"></div>
+  </div>
 
+  <div class="container">
+    <div class="footer__columns">
+      <div class="footer__col">
+        <h3 class="footer__col-title">
+          <i data-feather="shield"></i> <span>Security Blog</span>
+        </h3>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/about">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">
+          <i data-feather="share-2"></i> <span>Social Links</span>
+        </h3>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li>
+              <a href="https://www.linkedin.com/in/sahil-shaikh-cs" target="_blank">
+                <i data-feather="linkedin"></i><span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/EL3CTRO-9" target="_blank">
+                <i data-feather="github"></i><span>GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">
+          <i data-feather="mail"></i> <span>Contact</span>
+        </h3>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li>
+              <a href="mailto:sahilnrs9@gmail.com">sahilnrs9@gmail.com</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer__copyrights">
+      <p>&copy; {today.getFullYear()} Sahil Shaikh. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Feather icons script -->
+  <script type="text/javascript" src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  </script>
+</footer>
