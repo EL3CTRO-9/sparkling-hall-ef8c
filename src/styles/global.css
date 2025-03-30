@@ -181,86 +181,19 @@ nav a.active {
   }
 }
 
-/* Footer Styles */
-footer {
-  padding: 3rem 0;
-  color: var(--primary-text);
-  background: var(--header-footer-bg);
-  margin-top: auto;
-}
-
-footer .footer__columns {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-footer .footer__col-title {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-}
-
-footer .footer__col-title span {
-  margin-left: 1rem;
-}
-
-footer a {
-  display: flex;
-  align-items: center;
-  color: var(--primary-text);
-  text-decoration: none;
-}
-
-footer a span {
-  margin-left: 1rem;
-}
-
-footer .footer__nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-footer .footer__copyrights {
-  padding-top: 3rem;
-  margin-top: 3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+.footer {
+  background: #f1f1f1;
+  padding: 20px;
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-footer .footer__copyrights a {
-  margin-left: 0.5rem;
-  color: var(--accent);
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
 }
-
-footer .footer__copyrights a:hover {
-  color: var(--secondary-accent);
-}
-
-.footer__parralax-trees {
-	background-image: url("/footer/arbres.png");
-  }
-  
-  .footer__parralax-premierplan {
-	background-image: url("/footer/premierplanv3.png");
-  }
-  
-  .footer__parralax-secondplan {
-	background-image: url("/footer/second-plan.png");
-  }
-  
-  .footer__parralax-moto {
-	background: url("/footer/moto-net.gif") no-repeat;
-  }
-  
-  .footer__parralax-voiture {
-	background: url("/footer/voiture-fumee.gif") no-repeat;
-  }
-  
-
 /* Accessibility */
 .sr-only {
   border: 0;
