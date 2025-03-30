@@ -240,6 +240,27 @@ footer .footer__copyrights a:hover {
   color: var(--secondary-accent);
 }
 
+.footer__parralax-trees {
+	background-image: url("/footer/arbres.png");
+  }
+  
+  .footer__parralax-premierplan {
+	background-image: url("/footer/premierplanv3.png");
+  }
+  
+  .footer__parralax-secondplan {
+	background-image: url("/footer/second-plan.png");
+  }
+  
+  .footer__parralax-moto {
+	background: url("/footer/moto-net.gif") no-repeat;
+  }
+  
+  .footer__parralax-voiture {
+	background: url("/footer/voiture-fumee.gif") no-repeat;
+  }
+  
+
 /* Accessibility */
 .sr-only {
   border: 0;
