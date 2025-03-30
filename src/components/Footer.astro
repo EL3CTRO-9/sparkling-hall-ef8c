@@ -1,70 +1,23 @@
----
-const today = new Date();
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Footer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    const today = new Date();
+  </script>
 
-<footer class="footer">
-  <div class="footer__parralax">
-    <div class="footer__parralax-trees"></div>
-    <div class="footer__parralax-moto"></div>
-    <div class="footer__parralax-secondplan"></div>
-    <div class="footer__parralax-premierplan"></div>
-    <div class="footer__parralax-voiture"></div>
-  </div>
-
-  <div class="container">
-    <div class="footer__columns">
-      <div class="footer__col">
-        <h3 class="footer__col-title">
-          <i data-feather="shield"></i> <span>Security Blog</span>
-        </h3>
-        <nav class="footer__nav">
-          <ul class="footer__nav-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/about">About Me</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer__col">
-        <h3 class="footer__col-title">
-          <i data-feather="share-2"></i> <span>Social Links</span>
-        </h3>
-        <nav class="footer__nav">
-          <ul class="footer__nav-list">
-            <li>
-              <a href="https://www.linkedin.com/in/sahil-shaikh-cs" target="_blank">
-                <i data-feather="linkedin"></i><span>LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/EL3CTRO-9" target="_blank">
-                <i data-feather="github"></i><span>GitHub</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer__col">
-        <h3 class="footer__col-title">
-          <i data-feather="mail"></i> <span>Contact</span>
-        </h3>
-        <nav class="footer__nav">
-          <ul class="footer__nav-list">
-            <li>
-              <a href="mailto:sahilnrs9@gmail.com">sahilnrs9@gmail.com</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/sahil-shaikh-cs" target="_blank">LinkedIn</a>
+      <a href="https://github.com/EL3CTRO-9" target="_blank">GitHub</a>
     </div>
-
-    <div class="footer__copyrights">
-      <p>&copy; {today.getFullYear()} Sahil Shaikh. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
+    <p>&copy; <script>document.write(today.getFullYear());</script> Sahil Shaikh. All rights reserved.</p>
+  </footer>
+</body>
+</html>
 
 
