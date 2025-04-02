@@ -9,7 +9,7 @@ heroImage: "/blog1.jpg"
 
 ## Why I Set Up the Honeypot
 
-As part of my **SANS Internet Storm Center Internship**, I wanted to explore real-world cyber threats by deploying a honeypot. This would allow me to collect attack data, analyze malicious activity, and understand how attackers interact with exposed systems. 
+As part of my **SANS Internet Storm Center Internship**, I had to build and deploy a honeypot. This would allow me to collect attack data, analyze malicious activity, and understand how attackers interact with exposed systems. 
 
 By setting up a honeypot, I aimed to:
 - Monitor malicious activity targeting my network.
